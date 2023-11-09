@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content=""/>
+        <title>JUMIA CLONE </title>
+        <link rel="stylesheet" href="styles/profile.css" type="text/css"/>
+        <link rel="shortcut icon" href="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" type="image/x-icon">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="styles/body.css">
+    <link rel="stylesheet" type="text/css" href="styles/load2.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src = "scripts/profile.js"></script>
+        <style>
+
+            form b{
+                font-size:13px;
+                color:orange;
+            }
+        </style>
+        </head>
+    <body>
+        <div class = "loader2">
+            <div class = "load2">
+            <div class = "rod"></div>
+        </div>
+            </div>
+                
+        <span class="fa fa-arrow-left back" style="float:left; font-weight:20px;font-size:20px;" onclick="back()"></span>
+           <div class = "top-logo">
+<div class = "logo">
+    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" alt="">
+</div>
+    </div>
+    
+        <form action = "details.html" method="get">
+            <h3>Welcome back</h3>
+     <small style="font-size: large;margin: 10px;" >Log back into your JAYKAY account</small>
+     <div class = "edit">
+            <h4 class = "num">+234 905 7326 602</h4>
+      <span>Edit</span>
+         </div>
+    <div class = "mail-fone">
+        <input autofocus = "true" type="password" name="fname" required = "true" class = "label" id='pass'>
+        <label>Password *</label>
+            <i class="fa fa-eye-slash" id="open" onclick="decode()"></i>
+    <i class="fa fa-eye eye"  style="display:none;" onclick="slash()"></i>
+    </div>
+        
+  <input type="submit" value="Login" class = "continue" id = "continue">
+    <b style="cursor: pointer;">Forgot your password?</b>
+     
+</form>
+    
+               <div class = "support">
+<p>For further support, you may visit the Help Center or contact our customer service team.</p>
+    </div>
+        
+            <div class = "bottom" style = "margin-bottom:20px;">
+
+            <h1>JAYKAY</h1>
+              <div class = "logo-small">
+<img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" alt="">
+</div>
+              </div>
+    
+    </body>
+        <script >
+                   let pswd = document.getElementById("pass");
+         let cpass = document.getElementById("cpswd");
+let button = document.getElementById("continue");
+let username = document.querySelector(".num");
+username.innerHTML = localStorage.getItem("jumia-user");
+
+         document.getElementById("continue").onclick = ()=>{
+   
+    if(document.getElementById("pass").value === localStorage.getItem("Jumiapaswd")){
+document.querySelector(".loader2").style.display ="flex";
+document.querySelector("form").action = "index.html";
+    return true;
+}else{
+    document.querySelector("input").classList.add("error");
+    return false;
+}
+}
+//crack password
+         function decode(){
+    if(pswd.type == "password"){
+        pswd.type = "text";
+     document.getElementById("open").style.display ="none";
+      document.querySelector(".eye").style.display = "block";
+    }
+
+    else{
+        pswd.type = "password";
+    }
+    
+    }
+    
+     //encrypt
+     function slash(){
+         if(pswd.type == "text"){
+        pswd.type = "password";
+     document.getElementById("open").style.display ="block";
+      document.querySelector(".eye").style.display = "none";
+    }
+ 
+    else{
+        
+        pswd.type = "text";
+    }
+     }
+    
+        </script>
+            
+        </html>
+            

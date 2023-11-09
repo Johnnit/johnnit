@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content=""/>
+        <title>JUMIA CLONE </title>
+        <link rel="stylesheet" href="styles/profile.css" type="text/css"/>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="styles/body.css">
+    <link rel="shortcut icon" href="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles/load2.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src = "scripts/profile.js"></script>
+        
+        <style>
+           
+        </style>
+        </head>
+    <body>
+        <div class = "loader2">
+            <div class = "load2">
+            <div class = "rod"></div>
+        </div>
+            </div>
+                
+        <span class="fa fa-arrow-left back" style="margin:20px 10px;font-weight:20px;font-size:20px;" onclick="back()"></span>
+            <div class = "top-logo">
+<div class = "logo">
+    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg">
+</div>
+    </div>
+    
+        <form action = "details.html" method="get">
+            <h3>Create your account</h3>
+     <small >Let's get started by creating your account. <br>To keep your account safe, we need a strong password.</small>
+     <div class = "edit">
+            <h4 class = "num">+234 905 7326 602</h4>
+      <span onclick="edit()">Edit</span>
+         </div>
+    <div class = "mail-fone">
+        <input autofocus = "true" type="password" name="fname" min-length="6"  required = "true" class = "label" id = "pswd">
+        <label>Password *</label>
+            <i class="fa fa-eye-slash" id="open" onclick="decode()"></i>
+              <i class="fa fa-eye eye" style="display:none;" id="close" onclick="slash()"></i>
+    </div>
+        <div class = "strong" >
+            <div class = "correct">
+            <span></span> 
+            <span></span>
+            <span></span>
+                </div>
+               <small>strong</small>
+        </div>
+        
+    <div class = "mail-fone">
+        <input autofocus = "true" type="password" name="fname" required = "true" class = "label" id = "cpswd" min-length="6">
+        <label>Confirm Password *</label>
+            
+    </div>
+  
+  <input type="submit" value="Continue" class = "continue" id = "continue">
+     
+</form>
+    
+               <div class = "support">
+<p>For further support, you may visit the Help Center or contact our customer service team.</p>
+    </div>
+        
+            <div class = "bottom" style = "margin-bottom:20px;">
+
+            <h1>JAYKAY</h1>
+              <div class = "logo-small">
+    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" alt="">
+</div>
+              </div>
+    
+    </body>
+        <script >
+         let pswd = document.getElementById("pswd");
+         let cpass = document.getElementById("cpswd");
+let button = document.getElementById("continue");
+let username = document.querySelector(".num");
+username.innerHTML = localStorage.getItem("jumia-user");
+//password onblur
+    pswd.onblur = ()=>{
+if(pswd.value.length > 6){
+        document.querySelector(".strong").style.display = "block";
+}
+    }
+    
+    
+        //crack password
+         function decode(){
+    if(pswd.type == "password" || cpass.type == "password"){
+        pswd.type = "text";
+        cpass.type = "text";
+     document.getElementById("open").style.display ="none";
+      document.querySelector(".eye").style.display = "block";
+    }
+
+    else{
+        cpass.type = "password";
+        pswd.type = "password";
+    }
+    
+    }
+    
+     //encrypt
+     function slash(){
+         if(pswd.type == "text" || cpass.type == "text"){
+        pswd.type = "password";
+        cpass.type = "password";
+     document.getElementById("open").style.display ="block";
+      document.querySelector(".eye").style.display = "none";
+    }
+ 
+    else{
+        cpass.type = "text";
+        pswd.type = "text";
+    }
+     }
+    
+     
+// button click
+button.onclick=()=>{
+
+    //password confirmation
+     if(pswd.value.length != cpass.value.length){
+        pswd.style.border = "2px solid red";
+        cpass.style.border = "2px solid red";
+         pswd.focus();
+        return false;
+    }
+     else if((pswd.value.length && cpass.value.length) < 6){
+        pswd.style.border = "2px solid red";
+        cpass.style.border = "2px solid red";
+    pswd.focus();
+        return false;
+    }
+     else if(pswd.value != cpass.value){
+        pswd.style.border = "2px solid red";
+        cpass.style.border = "2px solid red";
+         pswd.focus();
+        return false;
+    }
+    else{
+        pswd.blur();
+        pswd.style.border = "2px solid blue";
+        cpass.style.border = "2px solid blue";
+        localStorage.setItem("Jumiapaswd", `${pswd.value}`);
+    localStorage.getItem("Jumiapaswd");
+        return true;
+    }
+    
+}
+        </script>
+            
+        </html>        

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content=""/>
+        <title>JUMIA CLONE </title>
+        <link rel="shortcut icon" href="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" type="image/x-icon">
+        <link rel="stylesheet" href="styles/profile.css" type="text/css"/>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="styles/body.css">
+    <link rel="stylesheet" type="text/css" href="styles/load2.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src = "scripts/profile.js"></script>
+        <style></style>
+        </head>
+    <body>
+        
+        <div class = "loader2">
+            <div class = "load2">
+            <div class = "rod"></div>
+        </div>
+            </div>
+                
+        <span class="fa fa-arrow-left back" style="margin:20px 10px;font-weight:20px;font-size:20px;" onclick="back()"></span>
+            <div class = "top-logo">
+<div class = "logo">
+    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" alt="">
+</div>
+    </div>
+        <form  method="get">
+            <h3>Welcome to JAYKAY</h3>
+     <small >Type your e-mail or phone number to log in or create a JAYKAY account.</small>
+    <div class = "mail-fone">
+        <input autofocus = "true" type="text" name="fname" required = "true" class = "username">
+        <label>Email or Mobile Number *</label>
+    </div>
+        <p style = "color:red;
+font-size:10px; text-align:none;margin-top:-17px; padding-left:20px;display:none;">Either email or the phone number entered is not valid</p>
+  
+  <input type="submit" disabled = "true" value="Continue" class = "continue" id = "continue">
+     
+</form>
+    <div class = "face">
+              <button class = "bx bxl-facebook-square facebook" style="font-size: large; font-weight: bold;">Log in with Facebook </button> 
+<p>For further support, you may visit the Help Center or contact our customer service team.</p>
+    </div>
+            <div class = "bottom">
+            <h1>JAYKAY</h1>
+              <div class = "logo-small">
+    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" alt="">
+</div>
+              </div>
+    
+        
+    </body>
+        <script>
+            let username = document.querySelector(".username");
+let next = document.getElementById("continue");
+
+next.removeAttribute("disabled");
+next.onclick=()=>{
+      if(document.querySelector(".username").value == ""){
+    document.querySelector('p').style.display="block";
+    document.querySelector("input").classList.add("error");
+    return false;
+}
+//open sign in
+ else  if(document.querySelector(".username").value === localStorage.getItem("jumia-user")){
+    next.disabled = false;
+    localStorage.setItem("jumia-user", `${username.value}`);
+      localStorage.getItem("jumia-user");
+
+    next.style.background = "rgba(0,0,0,0.2)";
+    document.querySelector(".loader2").style.display ="flex";
+  
+    document.querySelector("form").action = "sign-in.html";
+     
+  }
+  //open create account
+  else if(document.querySelector(".username").value !== localStorage.getItem("jumia-user")){
+      next.removeAttribute("disabled");
+      //store value inside local
+      localStorage.setItem("jumia-user", `${username.value}`);
+     
+     next.style.background = "rgba(0,0,0,0.2)";
+    document.querySelector(".loader2").style.display ="flex"; localStorage.getItem("jumia-user");
+
+   document.querySelector("form").action = "createacc.html";
+  }
+  else{
+      return true;
+  }
+}
+
+        </script>
+        </html>

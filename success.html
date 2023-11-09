@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content=""/>
+        <title>JUMIA CLONE </title>
+        <link rel="shortcut icon" href="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" type="image/x-icon">
+        <link rel="stylesheet" href="styles/profile.css" type="text/css"/>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="styles/body.css">
+    <link rel="stylesheet" type="text/css" href="styles/load2.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src = "scripts/profile.js"></script>
+        <style>
+            .edit{
+                display:flex;
+               justify-content:space-between;
+               align-items:center;
+               background:rgba(0,0,0,0.1);
+               padding:15px;
+               margin-top:15px;
+            }
+            .edit h4{
+                font-size:12px;
+            }
+            .edit span{
+                color:orange;
+                font-size:12px;
+            }
+            .success{
+                position:absolute;
+                font-size:30px;
+                color:greenyellow;
+                inset: red;
+                margin-left:70px;
+                margin-top:20px;
+            }
+            .wrap{
+                width:100%;
+                padding:20px;
+                display:flex;
+                transform: translateY(30%);
+                justify-content: center;
+                align-items: center;
+                flex-direction:column;
+                gap:10px;
+                text-align:center;
+            }
+            .wrap p{
+                margin:50px 0 20px 0;
+                font-size:16px;
+            }
+            
+            button{
+                color:white;
+                background-color:blue;
+                width: 40%;
+                font-weight: 700;
+                font-size: large;
+            }
+       .name{
+           text-decoration:none;
+           
+       }
+      em{
+                text-decoration:none;
+                color:orange;
+            }
+            .bottom{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position:absolute;
+                bottom:0;
+            }
+        </style>
+        </head>
+    <body>
+        <div class = "loader2">
+            <div class = "load2">
+            <div class = "rod"></div>
+        </div>
+            </div>
+                
+    <!--logo-->
+            <div class = "top-logo" style="transform: translateY(50%);">
+<div class = "logo">
+    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" alt="">
+</div>
+        <span class='bx bxs-check-circle success'></span>
+   
+    </div>
+    <div class = "wrap">
+            <h3><span class="name">Ajala</span>, Your account has been created!</h3>
+    <p>You will be redirected in <em>1 second.</em> Or click on the <mark>get started button.</mark></p>
+        <button>Get started</button>
+            </div>
+                
+            <div class = "bottom" style = "margin-bottom:20px;">
+
+            <h1>JAYKAY</h1>
+              <div class = "logo-small">
+    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" alt="">
+</div>
+              </div>
+  </body>
+      <script>
+          //name
+        document.querySelector(".name").innerHTML = localStorage.getItem("Jumia-fname");
+let move =10;
+
+    
+      const tim = () =>{
+      setInterval(()=>{
+        if(move == 10 ){
+    move--;
+    document.querySelector("em").innerHTML= move + " seconds";
+        }
+        else if(move == 0){
+    clearInterval(tim);
+    open("index.html");  
+}
+}, 1000);
+
+}
+tim();
+
+
+document.querySelector("button").onclick = ()=>{
+    document.querySelector(".loader2").style.display="flex";
+setTimeout(()=>{
+    document.querySelector(".loader2").style.display="none";
+
+}, 20000);
+window.open("index.html");
+}
+      </script>
+      </html>

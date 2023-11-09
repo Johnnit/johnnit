@@ -1,0 +1,1349 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content=""/>
+        <title>JUMIA CLONE </title>
+        <link rel="stylesheet" href="styles/style.css" type="text/css"/>
+            <link rel="stylesheet" href="styles/cart.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="styles/load.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    
+        <script src = "scripts/script.js"></script>
+            <link rel="stylesheet" type="text/css" href="styles/body.css">
+        <style>
+          
+            .ad{
+    width:100%;
+    height:100%;
+    background:url('house.jpg');
+    background-position:right;
+    border-radius:5px;
+    border:2px solid black;
+}
+i sup{
+    font-size:8px;
+    color:white;
+    border-radius:50%;
+    padding:2px;
+    background-color:orange;
+    display:none;
+}
+        </style>
+    </head>
+    <body>
+          <!--loader-->
+             <div class = "loader">
+<div class = "load">
+    <i class="bx bxs-star"></i>
+</div>
+       </div>
+           <!--navigation-->
+        <nav >
+            <div class = "position">
+                
+            <div class = "left">
+            <i class="fa fa-bars ham"></i>
+            <h1>JUMIA</h1>
+              <div class = "logo">
+    <i class="bx bxs-star"></i>
+</div>
+              </div>
+                  
+            <div class = "right">
+                <i class ="bx bx-search search-icon" style='display:none;'></i>
+           <i class="bx bx-user user" id="user" onclick= "user()"></i>
+           <i class="bx bx-cart-alt" onclick="showCart()"><sup></sup></i>
+               </div>
+                   
+                   </div>
+                       
+                   <div class = "search">
+                       <i class='fa fa-search lens' id='lens'></i>
+                       <input type="search" placeholder = "search your products, brands" class = "search-input">
+                   </div>
+        </nav>
+        <!--aside-->
+                      <aside>
+                                <div class = "left">
+            <i class="fa fa-times close"></i>
+            <h1>JUMIA</h1>
+                <div class = "logo">
+    <i class="bx bxs-star"></i>
+</div>
+              </div>
+                  
+                  <!--list-->
+                  <div class = "list">
+                      <div class = "need help">
+                          <small>NEED HELP?</small>
+                              <i class="bx bx-chevron-right"></i>
+                      </div>
+                          <!--wrap-->
+                          <div class = "wrap">
+                              <!--jummy-->
+                            <div class = "Jummy">
+                          <small>MY JUMIA ACCOUNT</small>
+                              <i class="bx bx-chevron-right"></i>
+                      </div>
+                          <!--jummy list-->
+                      <div class = "jummy-list">
+                          <i class="bx bx-box"></i>
+                          <small>Orders</small>
+                      </div>
+                           <div class = "jummy-list">
+                          <i class="bx bx-terminal"></i>
+                          <small>Pending Reviews</small>
+                      </div>
+                           <div class = "jummy-list">
+                          <i class="bx bxs-discount"></i>
+                          <small>Voucher</small>
+                      </div>
+                       <div class = "jummy-list">
+                          <i class="bx bx-heart"></i>
+                          <small>Saved Items</small>
+                      </div>
+                          </div>
+                              <!--end of wrap-->
+                              
+                          <!--wrap-->
+                          <div class = "wrap">
+                              <!--jummy-->
+                            <div class = "Jummy">
+                          <small>OUR CATEGORIES</small>
+                           <small class = "see" style = "color:orange;">see all</small>
+                      </div>
+                          <!--jummy list-->
+                      <div class = "jummy-list">
+                          <i class="bx bx-phone"></i>
+                          <small>Phone & Tablets</small>
+                      </div>
+                           <div class = "jummy-list">
+                          <i class="bx bx-radio"></i>
+                          <small>Appliances</small>
+                      </div>
+                           <div class = "jummy-list">
+                          <i class="bx bx-tv"></i>
+                          <small>Electronics</small>
+                      </div>
+                       <div class = "jummy-list">
+                          <i class="bx bx-dice-6"></i>
+                          <small>Super Markets</small>
+                      </div>
+                          
+                              <div class = "jummy-list">
+                          <i class="bx bx-phone"></i>
+                          <small>Phone & Tablets</small>
+                      </div>
+                           <div class = "jummy-list">
+                          <i class="bx bx-radio"></i>
+                          <small>Appliances</small>
+                      </div>
+                           <div class = "jummy-list">
+                          <i class="bx bx-tv"></i>
+                          <small>Electronics</small>
+                      </div>
+                       <div class = "jummy-list">
+                          <i class="bx bx-dice-6"></i>
+                          <small>Super Markets</small>
+                      </div>
+                          </div>
+                               <div class = "jummy-list">
+                          <i class="bx bx-phone"></i>
+                          <small>Phone & Tablets</small>
+                      </div>
+                           <div class = "jummy-list">
+                          <i class="bx bx-radio"></i>
+                          <small>Appliances</small>
+                      </div>
+                           <div class = "jummy-list">
+                          <i class="bx bx-tv"></i>
+                          <small>Electronics</small>
+                      </div>
+                       <div class = "jummy-list">
+                          <i class="bx bx-dice-6"></i>
+                          <small>Super Markets</small>
+                      </div>
+                          </div>
+                              
+                          
+                  </div>
+                      <hr></hr>
+                      <div class = "jummy-list">
+                          
+                          <small>Sell on Jumia</small>
+                      </div>
+                       <div class = "jummy-list">
+                        
+                          <small>Contact us</small>
+                      </div>
+                      </div>
+                      <!--end list-->
+                          
+                      
+                      </aside>
+        <section id = "top">
+            <div class = "num">
+                <h3>CALL TO ORDER: 09057326602</h3>
+            </div>
+                
+                <!--image slider-->
+                    
+            <div class = "image-slider">
+                <img src="bbb.webp" alt="image" width="50" height="auto"></img>
+    <img src="723.jpg" alt="image" width="50" height="auto"></img>
+    <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+    <img src="house.jpg" alt="image" width="50" height="auto"></img>
+    <img src="IMG.jpg" alt="image" width="50" height="auto"></img>
+    <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+            </div>
+                
+            <!--1st products list-->
+            <div class = "products">
+                
+            <div class = "product">
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+    <p>Authenticity Guatanteed</p>
+            </div>
+                 <div class = "product">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+    <p>Phones & Tablets</p>
+            </div>
+                 <div class = "product">
+                <img src="IMG.jpg" alt="image" width="50" height="auto"></img>
+    <p>Televisions</p>
+            </div>
+                 <div class = "product">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+    <p>Refrigerators</p>
+            </div>
+                 <div class = "product">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+    <p>Generators</p>
+            </div>
+                 <div class = "product">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+    <p>Men's Sneakers</p>
+            </div>
+                 <div class = "product">
+                <img src="bbb.webp" alt="image" width="50" height="auto"></img>
+    <p>Wristwatches</p>
+            </div>
+                 <div class = "product">
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+    <p>Clearance Sales</p>
+            </div>
+                  <div class = "product">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+    <p>Computing deals</p>
+            </div>
+                 <div class = "product">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+    <p>Gloceries</p>
+            </div>
+                 <div class = "product">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+    <p>Mobile Accessories</p>
+            </div>
+                 <div class = "product">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+    <p>#5000 Store</p>
+            </div>
+                
+            </div>
+                
+     <!--sales-->
+         <div class = "sales">
+             <div class = "flash">
+                 <h3>Flash Sales</h3>
+                     <!--counter-->
+                     <div class ="counter">
+                 <span>Time left:</span>
+                   <span class= "hr">10h</span>
+                   <span>:</span>
+                       <span clasd= "min">10m</span>
+                   <span>:</span>
+                    <span class  = "sec">60s</span>
+                        </div>
+             </div>
+                 
+             <h4>SEE ALL</h4>
+         </div>
+             
+         <!--product1 scroll-->
+             <div class = "products-scroll">
+                
+            <div class = "product-scroll" >
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+    <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                
+       </div>
+           
+                 <div class = "product-scroll">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi 12.6</h3>
+        <h5 class = "price">#123,200</h5>
+            <small class = "items-left">96 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                    
+                 <div class = "product-scroll">
+                <img src="IMG.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                   
+                
+                 <div class = "product-scroll">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="bbb.webp" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                  <div class = "product-scroll">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#447,390</h5>
+            <small class = "items-left">26 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+            </div>
+                
+         <!--brand festive-->
+             <div class = "brand">
+             <div class = "festive">
+                 <h3>Brand Festival Deals</h3>
+             </div>
+                 
+             <h4>SEE ALL</h4>
+         </div>
+             
+         <!--product2 scroll-->
+             <div class = "products-scroll">
+                
+            <div class = "product-scroll">
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+    <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                
+       </div>
+           
+                 <div class = "product-scroll">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi 12.6</h3>
+        <h5 class = "price">#123,200</h5>
+            <small class = "items-left">96 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                    
+                 <div class = "product-scroll">
+                <img src="IMG.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                   
+                
+                 <div class = "product-scroll">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="bbb.webp" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                  <div class = "product-scroll">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll" id = "last">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#447,390</h5>
+            <small class = "items-left">26 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+            </div>
+                
+                <!--costumes-->
+             <div class = "brand custume">
+             <div class = "festive costume">
+                 <h3>COSTMETICS</h3>
+             </div>
+                 
+             <h4>SEE ALL</h4>
+         </div>
+             
+                   <!--2nd products list-->
+            <div class = "products">
+                
+            <div class = "product">
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+    <p>Authenticity Guatanteed</p>
+            </div>
+                 <div class = "product">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+    <p>Phones & Tablets</p>
+            </div>
+                 <div class = "product">
+                <img src="IMG.jpg" alt="image" width="50" height="auto"></img>
+    <p>Televisions</p>
+            </div>
+                 <div class = "product">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+    <p>Refrigerators</p>
+            </div>
+                 <div class = "product">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+    <p>Generators</p>
+            </div>
+                 <div class = "product">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+    <p>Men's Sneakers</p>
+            </div>
+                 <div class = "product">
+                <img src="bbb.webp" alt="image" width="50" height="auto"></img>
+    <p>Wristwatches</p>
+            </div>
+                 <div class = "product">
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+    <p>Clearance Sales</p>
+            </div>
+                  <div class = "product">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+    <p>Computing deals</p>
+            </div>
+                 <div class = "product">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+    <p>Gloceries</p>
+            </div>
+                 <div class = "product">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+    <p>Mobile Accessories</p>
+            </div>
+                 <div class = "product">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+    <p>#5000 Store</p>
+            </div>
+                
+            </div>
+                     <!--end of product pacjage--> 
+                     
+               <!--brand festive-->
+             <div class = "brand">
+             <div class = "festive">
+                 <h3>Brand Festival Deals</h3>
+             </div>
+                 
+             <h4>SEE ALL</h4>
+         </div>
+             
+         <!--product2 scroll-->
+             <div class = "products-scroll">
+                
+            <div class = "product-scroll">
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+    <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                
+       </div>
+           
+                 <div class = "product-scroll">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi 12.6</h3>
+        <h5 class = "price">#123,200</h5>
+            <small class = "items-left">96 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                    
+                 <div class = "product-scroll">
+                <img src="IMG.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                   
+                
+                 <div class = "product-scroll">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="bbb.webp" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                  <div class = "product-scroll">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll" id = "last">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#447,390</h5>
+            <small class = "items-left">26 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+            </div>
+                     <!--end of product scroll--> 
+                     
+               <!--brand festive-->
+             <div class = "brand grocery">
+             <div class = "festive groceries">
+                 <h3>Top Groceries</h3>
+             </div>
+                 
+             <h4>SEE ALL</h4>
+         </div>
+             
+         <!--product2 scroll-->
+             <div class = "products-scroll">
+                
+            <div class = "product-scroll">
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+    <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                
+       </div>
+           
+                 <div class = "product-scroll">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi 12.6</h3>
+        <h5 class = "price">#123,200</h5>
+            <small class = "items-left">96 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                    
+                 <div class = "product-scroll">
+                <img src="IMG.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                   
+                
+                 <div class = "product-scroll">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="bbb.webp" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                  <div class = "product-scroll">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll" id = "last">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#447,390</h5>
+            <small class = "items-left">26 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+            </div>
+               <!--end of product scroll--> 
+            
+                     <!--jumia about-->
+                <div class = "jumia">
+                    <div class = "details">
+                    <h1>Jumia Nigeria – The Biggest Online Shopping Website</h1>
+    <h4>Shop for Everything You Need on Jumia Nigeria</h4>
+    <p>Jumia Nigeria is the largest online shopping website in Nigeria. We offer a platform where customers in any part of Nigeria can find and shop for all they need in one online store and that platform is the Jumia shopping website. On the Jumia mobile app or website, you can shop from the comfort of your home or during work breaks and get everything delivered fast without you having to stress or move an inch. Be it <u>fashion</u>, <u>electronics</u>, <u>mobile phones</u>, <u>computers</u>, or your everyday <u>groceries</u> you can get everything you need on Jumia online store.
+
+Have you used the Jumia online store today? Shop now on Jumia to enjoy a seamless online shopping experience. With fast delivery, free returns, and flexible payment options, you are certain to enjoy the convenience of shopping online.</p>
+    <h4>Shop for Original and Quality Items at The Best Prices</h4>
+    <p>Jumia Nigeria prides itself in giving the best prices and the best quality of products you can find anywhere in the country. Our strong partnership with top brands like <u>Oraimo</u>, <u>Samsung</u>, <u>Infinix</u>, <u>Xiaomi</u>, <u>Diageo</u>, <u>Tecno</u>, <u>Adidas</u>, <u>Nike</u>,<u> Defacto</u>,<u> Trendyol</u>, etc. guarantees our customers the cheapest prices on original brand products. Beyond that, customers also have exclusive access to the latest product released by these top brands. If you enjoy exclusivity, the <u>Jumia Official Store</u> is the right place for you. On the Jumia official stores, you can experience product launches and be among the first set of people in Nigeria to own new products. You can also enjoy huge offers on brand days that come with heavy discounts on various products ranging from mobile phones to drinks, clothing items, sneakers, and many more!
+
+Explore our official stores today to see a wide range of popular brands that sell directly on our platform and get assured of the best prices and quality of products you buy on Jumia.</p>
+    </div>
+    <button class = "showmore">SHOW MORE</button>
+     <button class = "showless">SHOW LESS</button>
+                </div>
+                   
+        </section>
+            
+        
+            <!--cart-->
+                <article class = "cart" id = "top" >
+                    
+                    <div class = "cartAdds" style = "display:none;">
+<!--cart element lists-->
+                    </div>
+                        
+                        
+                    <div class = "cart-status" >
+                        <i class='bx bxs-cart-add' style="font-size:100px;color:orange;"></i>
+                    <small>Your cart is empty!</small>
+                        <p>Browse our categories and discover our best deals! </p>
+                    <button class = "shop">Start Shopping</button>
+                        </div>
+                            
+                        <!--brand festive-->
+             <div class = "brand grocery">
+             <div class = "festive groceries">
+                 <h3>Recently viewed</h3>
+             </div>
+                 
+             <h4>SEE ALL</h4>
+         </div>
+             
+         <!--product2 scroll-->
+             <div class = "products-scroll">
+                
+            <div class = "product-scroll">
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+    <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                
+       </div>
+           
+                 <div class = "product-scroll">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi 12.6</h3>
+        <h5 class = "price">#123,200</h5>
+            <small class = "items-left">96 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                    
+                 <div class = "product-scroll">
+                <img src="IMG.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                   
+                
+                 <div class = "product-scroll">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="bbb.webp" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                  <div class = "product-scroll">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            <small class = "items-left">86 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+                 <div class = "product-scroll" id = "last">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#447,390</h5>
+            <small class = "items-left">26 items left</small>
+    <div class = "rod">
+        <div class = "fill">
+            </div>
+            </div>
+                </div>
+                
+            </div>
+               <!--end of product scroll--> 
+               
+               <!--brand festive-->
+             <div class = "brand grocery">
+             <div class = "festive groceries">
+                 <h3>Top selling items</h3>
+             </div>
+                 
+             <h4>SEE ALL</h4>
+         </div>
+             
+         <!--product2 scroll-->
+             <div class = "products-scroll">
+                
+            <div class = "product-scroll">
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+    <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+               
+       </div>
+           
+                 <div class = "product-scroll">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi 12.6</h3>
+        <h5 class = "price">#123,200</h5>
+            
+                </div>
+                    
+                 <div class = "product-scroll">
+                <img src="IMG.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            
+                </div>
+                   
+                
+                 <div class = "product-scroll">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="bbb.webp" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+          
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="rss.jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            
+                </div>
+                
+                  <div class = "product-scroll">
+                <img src="download (2).jpeg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="723.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            
+                </div>
+                
+                 <div class = "product-scroll">
+                <img src="hh.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#47,390</h5>
+            
+                </div>
+                
+                 <div class = "product-scroll" id = "last">
+                <img src="house.jpg" alt="image" width="50" height="auto"></img>
+      <h3 class = "name">XIAOMI Redmi A2+</h3>
+        <h5 class = "price">#447,390</h5>
+            
+                </div>
+                
+            </div>
+               <!--end of product scroll--> 
+               
+                </article>
+        <!--close article-->
+            
+<!--cartsection onclick-->
+<div class = "cartSection" id = "top">
+         <!--product2 scroll-->
+
+</div>
+    
+<!--delivery details-->
+    <div class = "dilifry">
+        <div class="diliver door">
+        <div class = "top">
+        <h3>Delivery Details </h3>
+        <i class="fa fa-times" onclick="cancel()"></i>
+            </div>
+                <div class = "main">
+                    <h5 style = "color:grey;margin-top:20px;">DOOR DELIVERY</h5>
+                    <p style = "font-size:16px;">Delivery time starts from the day you place your order to the day one of our associates makes a first attempt to deliver to you. Delivery will be attempted 2 times over 5 days (7.00 am to 5.30 pm) after which the item will be cancelled, if you are unreachable or unable to receive the order.</p>
+    <h5 style = "color:grey;margin-top:20px;">DELIVERY FEE DETAILS</h5>
+        <div class = "bottom" >
+        <h3>Total Delivery Amount</h3>
+        <h3>#650</h3>
+            </div>
+                
+                </div>
+                </div>
+                    
+                 <div class="diliver pickup">
+        <div class = "top">
+        <h3>Delivery Details </h3>
+        <i class="fa fa-times" onclick="cancel()"></i>
+            </div>
+                <div class = "main">
+                    <h5 style = "color:grey;margin-top:20px;">PICKUP STATION</h5>
+                    <p style = "font-size:16px;">Delivery time starts from the day you place your order to the day your order arrives at the pickup station. You will be notified of your order's arrival, and you have to retrieve it within 5 days. If the order is not picked up, it will be automatically cancelled.</p>
+    <h5 style = "color:grey;margin-top:20px;">DELIVERY FEE DETAILS</h5>
+        <div class = "bottom" >
+        <h3>Total Delivery Amount</h3>
+        <h3>#250</h3>
+            </div>
+                
+                </div>
+                </div>
+    </div>
+     
+        <!--footer-->
+            <footer>
+                <div class = "go-up">
+                    <i class='fa fa-chevron-up'></i>
+                     <a href = "#top"><span>BACK TO TOP</span></a>
+                </div>
+                    <div class = "footer-links">
+                        <div class="link one">
+                        <small class = "chat">CHAT WITH US</small>
+                            <small class = "help">HELP CENTER</small>
+                             <small class = "contact">CONTACT US</small>
+    </div>
+         <div class="link two">
+                        <small class = "terms">TERMS & CONDITIONS</small>
+                            <small class = "privacy">PRIVACY NOTICE</small>
+                           <small class = "cookie">COOKIE NOTICE</small>
+    </div>
+         <div class="link three">
+                        <small class = "become">BECOME A SELLER</small>
+                        <small class = "report">REPORT A PRODUCT</small>
+    </div>
+         <div class="link four">
+                        <small class = "ship">SHIP YOUR PACKAGE ANYWHERE IN NIGERIA</small>
+                    <small class = "jumia">JUMIA ANNIVERSARY 2023</small>
+                      </div>  
+                      <hr></hr>
+     <small style = "color:grey;">All Rights Reserved</small>
+                    </div>
+            </footer>
+                
+            <script src = "scripts/addCart.js" type = "text/javascript"></script>
+    
+        <script>
+            
+//cancel delivery details
+function cancel(){
+   document.querySelector(".pickup").style.display="none";
+document.querySelector(".door").style.display="none"; document.querySelector(".dilifry").style.display="none";
+}
+//show more buton
+document.querySelector(".showmore").onclick = ()=>{
+   document.querySelector(".showmore").style.display ="none";
+document.querySelector(".showless").style.display ="block"; document.querySelector(".jumia .details").classList.add("more");
+
+}
+//show less details
+document.querySelector(".showless").onclick = ()=>{
+   document.querySelector(".showmore").style.display ="block";
+document.querySelector(".showless").style.display ="none";
+document.querySelector(".jumia .details").classList.remove("more");
+}
+
+//close page
+document.querySelector('.close').onclick =()=>{
+document.querySelector("aside").style.display ="none";
+}
+//hamburger
+document.querySelector('.ham').onclick =()=>{
+document.querySelector("aside").style.display ="block";
+}
+
+//cart onclick
+function showCart(){ 
+    document.querySelector(".loader").style.display = "flex";
+    setTimeout(()=>{
+        document.querySelector(".loader").style.display = "none";
+document.querySelector("section").style.display ='none';
+document.querySelector(".search").style.display ='none';
+document.querySelector("nav").style.padding = 10+ 'px';
+document.querySelector(".search-icon").style.display ="block";
+document.querySelector(".cartSection").style.display ="none";
+document.querySelector(".cart").style.display =" flex";
+    }, 4000);
+    
+}
+
+            //shop onclick
+document.querySelector(".shop").onclick= ()=>{
+    document.querySelector(".shop").style.border = 2 +"px solid rgba(0,0,0,0.3)";
+    document.querySelector(".loader").style.display = "flex";
+//loader and others
+    setTimeout(()=>{
+        document.querySelector(".loader").style.display = "none";
+document.querySelector(".search").style.display ='flex';
+document.querySelector(".search-icon").style.display ="none";
+document.querySelector("section").style.display =" flex";
+document.querySelector("article").style.display ="none";
+document.querySelector(".cartSection").style.display ="none";
+    }, 4000);
+    
+}
+
+            </script>
+    </body>
+ </html>

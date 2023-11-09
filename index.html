@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JK International</title>
+    <meta name="description" content="JK shopping hall">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mediaq.css">
+    <script src="./js.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg
+    " type="image/x-icon">
+    <style>
+        .user{
+            background: grey;
+             padding: 10px;
+             border-radius: 50%;
+        }
+        .user:hover{
+            background: darkblue;
+            color: white;
+        }
+        #cart:hover{
+            padding: 10px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.7);
+        }
+        .cancel{
+            position: absolute;
+            background: rgba(0,0,0,0.4);
+             padding: 10px;
+            border-radius: 50%; 
+            left: 20px;
+            font-size: 20px;
+        }
+    </style>
+     <link rel="apple-touch-icon" href="images/030caca3-7b26-438e-b90a-2efb499cdf57.jpeg">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" alt="logo">
+            <h3 class="nav">JAYKAY</h3>
+            
+        </div>
+        <i class="fa fa-search searchIcon1" ></i>
+
+        <div class="search">
+            <input type="search" name="search" id="search" placeholder="search for categories of product">
+            <i class="fa fa-search searchIcon2" ></i>
+            <button class="enter" onclick="searchProduct()">Search</button>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="top1">Products</a>
+            <i class="fa fa-user user"></i>
+            <a href="signup.html"><button class="sign">Sign in</button></a>
+            <b class="accName"></b>
+            <i class="fa fa-shopping-cart" id="cart" onclick="openCart()"><sup class="count">0</sup></i>
+        </div>
+
+    </nav>
+
+    <div class="ad">
+        <!--<h2>Welcome to JAYKAY store <br> Thanks for patronizing</h2>-->
+        <marquee behavior="scroll" direction="left">WELCOME TO JAYKAY STORES</marquee>
+    </div>
+    <!--aside cart-->
+    <aside class="cart" style="background: white;">
+        <div class="head" style="display: flex;align-items: center; justify-content: center; margin-top: 15px;">
+            <span class="fa fa-times cancel" style="" onclick="closeCart()"></span>
+            <h2 class="title" style="text-align: center; align-self: center;">CART</h2>
+        </div>
+        <div class="empty" style="display: flex;justify-content: center;min-height:70vh;align-items: center;text-align: center;">
+            <h3>YOUR CART IS EMPTY</h3>
+        </div>
+
+        <div class="cart-items" id="goods">
+           
+        </div>
+
+        <div class="bottom">
+            <h2 class="Total">Total: <span class="amt">#0.00</span></h2>
+            <button class="proceed">PROCEED TO CHECKOUT</button>
+        </div>
+    </aside>
+
+    <section class="welcome">
+        <h1 class="greeting" style="color: white;">Sip on the good <br>stuff</h1>
+        <h2 class="greet" style="color: white;text-shadow: 0 0 1px darkblue;">Hydrate with best-in-class water filtration and <br>never look back</h2>
+        <button class="shop" onclick="shop()">Shop Now</button>
+    </section>
+
+    <div class="up">
+        <i class="fa fa-arrow-up"></i>
+    </div>
+
+    <!--details-->
+</article>
+<!--close article-->
+    
+<!--cartsection onclick-->
+<div class = "cartSection" id = "top">
+ <!--product2 scroll-->
+
+</div>
+
+<!--delivery details-->
+<div class = "dilifry">
+<div class="diliver door">
+<div class = "top">
+<h3>Delivery Details </h3>
+<i class="fa fa-times" onclick="cancel()"></i>
+    </div>
+        <div class = "main">
+            <h5 style = "color:grey;margin-top:20px;">DOOR DELIVERY</h5>
+            <p style = "font-size:16px;">Delivery time starts from the day you place your order to the day one of our associates makes a first attempt to deliver to you. Delivery will be attempted 2 times over 5 days (7.00 am to 5.30 pm) after which the item will be cancelled, if you are unreachable or unable to receive the order.</p>
+<h5 style = "color:grey;margin-top:20px;">DELIVERY FEE DETAILS</h5>
+<div class = "bottom" >
+<h3>Total Delivery Amount</h3>
+<h3>#650</h3>
+    </div>
+        
+        </div>
+        </div>
+            
+         <div class="diliver pickup">
+<div class = "top">
+<h3>Delivery Details </h3>
+<i class="fa fa-times" onclick="cancel()"></i>
+    </div>
+        <div class = "main">
+            <h5 style = "color:grey;margin-top:20px;">PICKUP STATION</h5>
+            <p style = "font-size:16px;">Delivery time starts from the day you place your order to the day your order arrives at the pickup station. You will be notified of your order's arrival, and you have to retrieve it within 5 days. If the order is not picked up, it will be automatically cancelled.</p>
+<h5 style = "color:grey;margin-top:20px;">DELIVERY FEE DETAILS</h5>
+<div class = "bottom" >
+<h3>Total Delivery Amount</h3>
+<h3>#250</h3>
+    </div>
+        
+        </div>
+        </div>
+</div>
+<!--end of delivery-->
+
+<!--comment on cart addition-->
+<div class="alert">
+    <h3 class="msg">One product added to cart</h3>
+</div>
+<!--clothes-->
+<div class="roller">
+    <h4 id="category">Clothes</h4>
+    <span class="seeAll">see all</span>
+</div>
+    <section class="products">
+
+        <div class="product" id="products">
+            <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+            <h2 class="name">Vintage gucci</h2>
+            <h4 class="price">#20000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+            <h2 class="name">Vintage design</h2>
+            <h4 class="price">#20000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+            <h2 class="name">Blended Vintage</h2>
+            <h4 class="price">#30000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+            <h2 class="name">Versace</h2>
+            <h4 class="price">#50000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+            <h2 class="name">Gucci</h2>
+
+            <h4 class="price">#2000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+            <h2 class="name">Fila</h2>
+            <h4 class="price">#4400</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+            <h2 class="name">Ankara shirt</h2>
+            <h4 class="price">#44000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+            <h2 class="name">Ankara+black shirt</h2>
+            <h4 class="price">#200000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+            <h2 class="name">Ankara gucci</h2>
+            <h4 class="price">#65000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+            <h2 class="name">Ankara filla</h2>
+            <h4 class="price">#6500</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+            <h2 class="name">Ankara</h2>
+            <h4 class="price">#90000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/6c84f12b-6d52-4ddb-b61d-aef5b7803713.jpeg"  alt="cloth">
+            <h2 class="name">Ankara cross</h2>
+            <h4 class="price">#80000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/56b5ea28-cd00-4413-8be4-56e1e6621de9.jpeg"  alt="cloth">
+            <h2 class="name">Design Ankara</h2>
+            <h4 class="price">#70000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/60d4139b-5d0f-4e1e-9de3-8ac63e7a7a62.jpeg" alt="cloth">
+            <h2 class="name">Ankara Versace</h2>
+            <h4 class="price">#400000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/4cfaeaba-2400-45a0-9394-b932ac61058a.jpeg" alt="cloth">
+            <h2 class="name">Ankara guci</h2>
+            <h4 class="price">#15000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/43c8959c-d65e-4ecc-ac30-d78f2ac6d0eb.jpeg" alt="cloth">
+            <h2 class="name">Ankar guci</h2>
+            <h4 class="price">#65000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/4029f47e-4a42-46f8-b683-03e5047ed417.jpeg" alt="cloth">
+            <h2 class="name">Anra guci</h2>
+            <h4 class="price">#265000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/56b5ea28-cd00-4413-8be4-56e1e6621de9.jpeg" alt="cloth">
+            <h2 class="name">Ankarucci</h2>
+            <h4 class="price">#200</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/22837a0b-f0be-4aee-af86-eb5258459ebf.jpeg"  alt="cloth">
+            <h2 class="name">Ana gucci</h2>
+            <h4 class="price">#2000000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/20dcabe1-7481-4f6d-8530-09ce0eb56e5c.jpeg"  alt="cloth">
+            <h2 class="name">Anraucci</h2>
+            <h4 class="price">#200600</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/2022 heißer Verkauf neue Art und Weise Camisa Masculina Langarm-Shirt Männer Slim Fit Design Formal Casual Marke Male Dress Shirt Größe M-4XL - Pink _ 80-86kg size 4XL.jpeg"  alt="cloth">
+            <h2 class="name">BANABANA</h2>
+            <h4 class="price">#200050</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+        
+        <div class="product">
+            <img src="./images/0977e37b-353a-44c4-8c0c-0a55ddefc482.jpeg"  alt="cloth">
+            <h2 class="name">Ankara</h2>
+            <h4 class="price">#200005</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+
+        <div class="product">
+            <img src="./images/030caca3-7b26-438e-b90a-2efb499cdf57.jpeg" alt="cloth">
+            <h2 class="name">Ankargi</h2>
+            <h4 class="price">#204000</h4>
+            <button class="more">click for more details</button>
+            <!--toCart-->
+            <div class="toCart">
+                <button class="fas fa-shopping-cart addCart">Add cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    
+               
+
+    <!--section2-->
+    <div class="roller">
+        <h4 id="category">PHONES AND ACCESSORIES</h4>
+        <span class="seeAll">see all</span>
+    </div>
+        <section class="products">
+    
+            <div class="product" id="products">
+                <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                <h2 class="name">Vintage gucci</h2>
+                <h4 class="price">#20000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+    
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                <h2 class="name">Vintage design</h2>
+                <h4 class="price">#20000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                <h2 class="name">Blended Vintage</h2>
+                <h4 class="price">#30000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                <h2 class="name">Versace</h2>
+                <h4 class="price">#50000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                <h2 class="name">Gucci</h2>
+                <h4 class="price">#2000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                <h2 class="name">Fila</h2>
+                <h4 class="price">#4400</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                <h2 class="name">Ankara shirt</h2>
+                <h4 class="price">#44000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                <h2 class="name">Ankara+black shirt</h2>
+                <h4 class="price">#200000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                <h2 class="name">Ankara gucci</h2>
+                <h4 class="price">#65000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                <h2 class="name">Ankara filla</h2>
+                <h4 class="price">#6500</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                <h2 class="name">Ankara</h2>
+                <h4 class="price">#90000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/6c84f12b-6d52-4ddb-b61d-aef5b7803713.jpeg"  alt="cloth">
+                <h2 class="name">Ankara cross</h2>
+                <h4 class="price">#80000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/56b5ea28-cd00-4413-8be4-56e1e6621de9.jpeg"  alt="cloth">
+                <h2 class="name">Design Ankara</h2>
+                <h4 class="price">#70000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/60d4139b-5d0f-4e1e-9de3-8ac63e7a7a62.jpeg" alt="cloth">
+                <h2 class="name">Ankara Versace</h2>
+                <h4 class="price">#400000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/4cfaeaba-2400-45a0-9394-b932ac61058a.jpeg" alt="cloth">
+                <h2 class="name">Ankara guci</h2>
+                <h4 class="price">#15000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/43c8959c-d65e-4ecc-ac30-d78f2ac6d0eb.jpeg" alt="cloth">
+                <h2 class="name">Ankar guci</h2>
+                <h4 class="price">#65000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/4029f47e-4a42-46f8-b683-03e5047ed417.jpeg" alt="cloth">
+                <h2 class="name">Anra guci</h2>
+                <h4 class="price">#265000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/56b5ea28-cd00-4413-8be4-56e1e6621de9.jpeg" alt="cloth">
+                <h2 class="name">Ankarucci</h2>
+                <h4 class="price">#200</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/22837a0b-f0be-4aee-af86-eb5258459ebf.jpeg"  alt="cloth">
+                <h2 class="name">Ana gucci</h2>
+                <h4 class="price">#2000000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/20dcabe1-7481-4f6d-8530-09ce0eb56e5c.jpeg"  alt="cloth">
+                <h2 class="name">Anraucci</h2>
+                <h4 class="price">#200600</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/2022 heißer Verkauf neue Art und Weise Camisa Masculina Langarm-Shirt Männer Slim Fit Design Formal Casual Marke Male Dress Shirt Größe M-4XL - Pink _ 80-86kg size 4XL.jpeg"  alt="cloth">
+                <h2 class="name">BANABANA</h2>
+                <h4 class="price">#200050</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+            
+            <div class="product">
+                <img src="./images/0977e37b-353a-44c4-8c0c-0a55ddefc482.jpeg"  alt="cloth">
+                <h2 class="name">Ankara</h2>
+                <h4 class="price">#200005</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+    
+            <div class="product">
+                <img src="./images/030caca3-7b26-438e-b90a-2efb499cdf57.jpeg" alt="cloth">
+                <h2 class="name">Ankargi</h2>
+                <h4 class="price">#204000</h4>
+                <button class="more">click for more details</button>
+                <!--toCart-->
+                <div class="toCart">
+                    <button class="fas fa-shopping-cart addCart">Add cart</button>
+                </div>
+    
+            </div>
+        </section>
+
+        <!--section3-->
+        <div class="roller">
+            <h4 id="category">HOME APPLIANCES</h4>
+            <span class="seeAll">see all</span>
+        </div>
+            <section class="products">
+        
+                <div class="product" id="products">
+                    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                    <h2 class="name">Vintage gucci</h2>
+                    <h4 class="price">#20000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+        
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                    <h2 class="name">Vintage design</h2>
+                    <h4 class="price">#20000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                    <h2 class="name">Blended Vintage</h2>
+                    <h4 class="price">#30000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                    <h2 class="name">Versace</h2>
+                    <h4 class="price">#50000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                    <h2 class="name">Gucci</h2>
+                    <h4 class="price">#2000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                    <h2 class="name">Fila</h2>
+                    <h4 class="price">#4400</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                    <h2 class="name">Ankara shirt</h2>
+                    <h4 class="price">#44000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                    <h2 class="name">Ankara+black shirt</h2>
+                    <h4 class="price">#200000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                    <h2 class="name">Ankara gucci</h2>
+                    <h4 class="price">#65000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                    <h2 class="name">Ankara filla</h2>
+                    <h4 class="price">#6500</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/00f7a4a3-5c1c-4cb2-9318-74685e004519.jpeg" width="100px"  alt="cloth">
+                    <h2 class="name">Ankara</h2>
+                    <h4 class="price">#90000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/6c84f12b-6d52-4ddb-b61d-aef5b7803713.jpeg"  alt="cloth">
+                    <h2 class="name">Ankara cross</h2>
+                    <h4 class="price">#80000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/56b5ea28-cd00-4413-8be4-56e1e6621de9.jpeg"  alt="cloth">
+                    <h2 class="name">Design Ankara</h2>
+                    <h4 class="price">#70000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/60d4139b-5d0f-4e1e-9de3-8ac63e7a7a62.jpeg" alt="cloth">
+                    <h2 class="name">Ankara Versace</h2>
+                    <h4 class="price">#400000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/4cfaeaba-2400-45a0-9394-b932ac61058a.jpeg" alt="cloth">
+                    <h2 class="name">Ankara guci</h2>
+                    <h4 class="price">#15000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/43c8959c-d65e-4ecc-ac30-d78f2ac6d0eb.jpeg" alt="cloth">
+                    <h2 class="name">Ankar guci</h2>
+                    <h4 class="price">#65000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/4029f47e-4a42-46f8-b683-03e5047ed417.jpeg" alt="cloth">
+                    <h2 class="name">Anra guci</h2>
+                    <h4 class="price">#265000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/56b5ea28-cd00-4413-8be4-56e1e6621de9.jpeg" alt="cloth">
+                    <h2 class="name">Ankarucci</h2>
+                    <h4 class="price">#200</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/22837a0b-f0be-4aee-af86-eb5258459ebf.jpeg"  alt="cloth">
+                    <h2 class="name">Ana gucci</h2>
+                    <h4 class="price">#2000000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/20dcabe1-7481-4f6d-8530-09ce0eb56e5c.jpeg"  alt="cloth">
+                    <h2 class="name">Anraucci</h2>
+                    <h4 class="price">#200600</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/2022 heißer Verkauf neue Art und Weise Camisa Masculina Langarm-Shirt Männer Slim Fit Design Formal Casual Marke Male Dress Shirt Größe M-4XL - Pink _ 80-86kg size 4XL.jpeg"  alt="cloth">
+                    <h2 class="name">BANABANA</h2>
+                    <h4 class="price">#200050</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+                
+                <div class="product">
+                    <img src="./images/0977e37b-353a-44c4-8c0c-0a55ddefc482.jpeg"  alt="cloth">
+                    <h2 class="name">Ankara</h2>
+                    <h4 class="price">#200005</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+        
+                <div class="product">
+                    <img src="./images/030caca3-7b26-438e-b90a-2efb499cdf57.jpeg" alt="cloth">
+                    <h2 class="name">Ankargi</h2>
+                    <h4 class="price">#204000</h4>
+                    <button class="more">click for more details</button>
+                    <!--toCart-->
+                    <div class="toCart">
+                        <button class="fas fa-shopping-cart addCart">Add cart</button>
+                    </div>
+        
+                </div>
+            </section>
+
+            <!--footer-->
+            <footer>
+                <ul>
+                    <li><a href="http://wa.me/+2349057326602">Chat us</a></li>
+                    <li><a href="tel:+2349057326602">Contact us</a></li>
+                    <li><a href="mailto:johnajala253@gmail.com">Report a product</a></li>
+                    <li>Terms & Conditions</li>
+                    <li>Help center</li>
+                </ul>
+                <address>All Rights Reserved.</address>
+            </footer>
+</body>
+<script>
+console.log(screen.width);
+let count = 0;
+let total = 0;
+let totalVal = document.querySelector('.amt');
+//add to cart button
+document.querySelectorAll('.addCart').forEach((e)=>{
+    e.addEventListener('click', (e)=>{
+        //get total amount 
+        let price = e.target.parentElement.parentElement.children[2].innerText;
+        let ordPrice = parseFloat(price.replace('#', ''));
+        total += ordPrice;
+        totalVal.innerHTML = '#'+total;
+        //addition to cart alert
+        document.querySelector('.msg').innerHTML = "One product has been added to cart";
+        document.querySelector('.alert').classList.add('remove');
+        setTimeout(()=>{
+            document.querySelector('.alert').classList.remove('remove');
+        }, 1700);
+        //adding and incrementing cart
+        document.querySelector('.empty').style.display='none';
+        count++;
+        document.querySelector('sup').innerText = count;
+        e.target.disabled = 'true';
+        document.querySelector('.cart-items').innerHTML += `
+        <div class="good">
+            <img src="${e.target.parentElement.parentElement.children[0].src}" width="100px"  alt="cloth">
+           <div class="cart-detail">
+            <h2 class="name">${e.target.parentElement.parentElement.children[1].innerText}</h2>
+            <h4 class="price">${e.target.parentElement.parentElement.children[2].innerText}</h4>
+            <button class="remove" onclick="removeItem(this)">Remove</button>
+            </div>
+            <!--QUANTITY-->
+            <div class="quantity">
+              <i class="fa fa-circle-plus inc" onclick='inCrease(this)'></i>
+              <span class="nums">1</span>
+              <i class="fa fa-circle-minus dec" onclick ='deCrease(this)'></i>  
+            </div>
+
+        </div>
+        `;
+    })
+})
+
+function removeItem(e){
+    if(confirm(`Are you sure you want to remove ${e.parentElement.parentElement.children[1].innerText} from cart?`)){
+   count -=1;
+   document.querySelector('sup').innerText = count;
+   let prise = e.parentElement.children[1].innerText;
+        let ordPrise = parseFloat(prise.replace('#', ''));
+        total -= ordPrise;
+        totalVal.innerHTML = '#'+total;
+        e.parentElement.parentElement.remove();
+    //remove from cart alert
+            document.querySelector('.msg').innerHTML = "One product has been removed from cart";
+        document.querySelector('.alert').classList.add('remove');
+        setTimeout(()=>{
+            document.querySelector('.alert').classList.remove('remove');
+        }, 3000);
+        if(document.querySelector('.cart-items').innerHTML === null){
+        alert('null cart');
+    }
+    }
+    
+}
+
+let quant = 1;
+
+function inCrease(e){
+    quant+=1;
+    e.parentElement.children[1].innerHTML = quant;
+}
+function deCrease(e){
+    quant-=1;
+    e.parentElement.children[1].innerHTML = quant;
+}
+//close cart function
+function closeCart(){
+    document.querySelector('.cart').classList.remove('close');
+}
+//open cart function
+function openCart(){
+    document.querySelector('.cart').classList.add('close');
+}
+
+
+const searchProduct = () =>{
+const title = document.getElementsByClassName('name');
+const enter = document.getElementById('enter');
+const seek = document.getElementById('search').value.toLocaleUpperCase();
+const shopContent = document.querySelectorAll('.product');
+
+for(let i = 0; i < title.length; i++){
+    let match = document.querySelectorAll('.name')[i];
+    console.log(match);
+    if(match){
+        let textValue = match.innerHTML || match.textContent;
+        console.log(textValue);
+        if(textValue.toLocaleUpperCase().indexOf(seek.trim())){
+            shopContent[i].style.display = '';
+        }
+        else{
+            title[i].style.display='none';
+        
+        }
+    }
+    else{
+        alert('00000');
+    }
+}
+}
+</script>
+</html>
