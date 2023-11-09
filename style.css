@@ -283,7 +283,7 @@ aside #goods img{
     font-size: 30px;
 }
 .welcome{
-    background: url(/images/dsBuffer.bmp.png);
+    background: url(dsBuffer.bmp.png);
     animation: back 3s ease-in-out infinite;
     background-size: cover;
     height: 100%;
